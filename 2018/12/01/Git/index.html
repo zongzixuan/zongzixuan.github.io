@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      Git知识 | triste__ 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="�����">
+    
+    
+
+    <meta name="description" content="# 关于git的学习笔记 了解git什么是gitGit是目前世界上最先进的分布式版本控制系统。 git的特点 版本库本地化，支持离线提交，相对独立不影响协同开发。 把内容按元数据方式存储，完整克隆版本库。 支持快速切换分支方便合并，比较合并性能好。 分布式版本库，无单点故障，内容完整性好。 更少的“仓库污染”。  操作git创建版本库 打开程序并输入$ mkdir simple$ cd simp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git知识 | triste__">
+<meta property="og:url" content="http://yoursite.com/2018/12/01/Git/index.html">
+<meta property="og:site_name" content="triste__">
+<meta property="og:description" content="# 关于git的学习笔记 了解git什么是gitGit是目前世界上最先进的分布式版本控制系统。 git的特点 版本库本地化，支持离线提交，相对独立不影响协同开发。 把内容按元数据方式存储，完整克隆版本库。 支持快速切换分支方便合并，比较合并性能好。 分布式版本库，无单点故障，内容完整性好。 更少的“仓库污染”。  操作git创建版本库 打开程序并输入$ mkdir simple$ cd simp">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://bmob-cdn-22657.b0.upaiyun.com/2018/12/01/c9f2d79a40d96a5780e9c6d831c2f093.jpg">
+<meta property="og:image" content="https://d26dzxoao6i3hh.cloudfront.net/items/3M0W1J2x433c1H3k2a0Y/3.png?v=6ee90e11">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkq72hfrfej20k305pdfw.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkq7v4wmy1j20kp0b53za.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkq8do1vlsj20k505cglu.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkq8kdl9hvj20jz07hmxf.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkqrvk3dfxj20k905cq38.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133ly1fkqs9fqs2ej20k106vdg6.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkqscy6mk6j20k402zwel.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkqsodiwpsj20jy02gaa2.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkqss6mrs0j20k202n74a.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkqta39w2wj20k40bb0tm.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkqtp6c5cjj20k1053dfz.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133ly1fkqttw04hnj20ju05tglt.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkr220b2wvj20k105njro.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkr2ifuvydj20fw0cu754.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkr3wdll9vj20j50ev0tv.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkr448lir4j20hs0dgjsb.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkr5fz9x9bj20yr05m0sx.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkr5kn5kpsj20ji0h4jsv.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkr5tzm9xvj21690n0q4s.jpg">
+<meta property="og:image" content="http://bmob-cdn-22657.b0.upaiyun.com/2018/12/01/dc51e29d408d41db80f56b13ce811b8b.gif">
+<meta property="og:updated_time" content="2018-12-01T10:12:24.605Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git知识 | triste__">
+<meta name="twitter:description" content="# 关于git的学习笔记 了解git什么是gitGit是目前世界上最先进的分布式版本控制系统。 git的特点 版本库本地化，支持离线提交，相对独立不影响协同开发。 把内容按元数据方式存储，完整克隆版本库。 支持快速切换分支方便合并，比较合并性能好。 分布式版本库，无单点故障，内容完整性好。 更少的“仓库污染”。  操作git创建版本库 打开程序并输入$ mkdir simple$ cd simp">
+<meta name="twitter:image" content="http://bmob-cdn-22657.b0.upaiyun.com/2018/12/01/c9f2d79a40d96a5780e9c6d831c2f093.jpg">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">triste__</a></h1>
+        <hr class="panel-cover__divider">
+
+        
+        <p class="panel-cover__description">
+          May the flames guide thee
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">Git知识</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-12-01" class="post-meta__date date">2018-12-01</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>﻿# 关于git的学习笔记<img src="http://bmob-cdn-22657.b0.upaiyun.com/2018/12/01/c9f2d79a40d96a5780e9c6d831c2f093.jpg" alt=""></p>
+<h2 id="了解git"><a href="#了解git" class="headerlink" title="了解git"></a>了解git</h2><h3 id="什么是git"><a href="#什么是git" class="headerlink" title="什么是git"></a>什么是git</h3><p>Git是目前世界上最先进的<strong>分布式版本控制系统</strong>。</p>
+<h3 id="git的特点"><a href="#git的特点" class="headerlink" title="git的特点"></a>git的特点</h3><ol>
+<li>版本库本地化，支持离线提交，相对独立不影响协同开发。</li>
+<li>把内容按元数据方式存储，完整克隆版本库。</li>
+<li>支持快速切换分支方便合并，比较合并性能好。</li>
+<li>分布式版本库，无单点故障，内容完整性好。</li>
+<li>更少的“仓库污染”。</li>
+</ol>
+<h2 id="操作git"><a href="#操作git" class="headerlink" title="操作git"></a>操作git</h2><h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><ol>
+<li>打开程序并输入<br><code>$ mkdir simple</code><br><code>$ cd simple</code><br><code>$ pwd</code><br>自动显示c/Users/Jonathan Lu/simple<br>其中仓库名可自定义，上面为simple<br><img src="https://d26dzxoao6i3hh.cloudfront.net/items/3M0W1J2x433c1H3k2a0Y/3.png?v=6ee90e11" alt="1"><br>再输入<code>git init</code><br><img src="https://ws1.sinaimg.cn/large/779cb133gy1fkq72hfrfej20k305pdfw.jpg" alt="2"><br>于是在目录里创立了一个.git的隐藏文件</li>
+<li>编写一个readme.txt  随便内容<br>txt放入本地仓库simple  <strong>重点</strong><br>输入命令<code>git add readme.txt</code><br>没有任何显示就对了，unix的哲学就是<strong>没有消息就是好消息</strong><br>第二步，输入<code>git commit -m&quot;wrote a readme file&quot;</code><br><img src="https://ws1.sinaimg.cn/large/779cb133gy1fkq7v4wmy1j20kp0b53za.jpg" alt="3"><blockquote>
+<p>cd 是定位到这个仓库， pwd显示路径，-m后面输入的是本次提交的说明，可以输任何内容，<br>commit可以一次性提交很多内容<br>用<code>ls -ah</code>可以使.git文件显示</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="时光机穿梭"><a href="#时光机穿梭" class="headerlink" title="时光机穿梭"></a>时光机穿梭</h3><h4 id="起初"><a href="#起初" class="headerlink" title="起初"></a>起初</h4><ol>
+<li>修改文件readme.txt内容</li>
+<li>之后，在git程序中输入<code>git status</code>,这个命令可以让我们时刻掌握仓库当前的状态，结果如下<img src="https://ws1.sinaimg.cn/large/779cb133gy1fkq8do1vlsj20k505cglu.jpg" alt="4"><br>他告诉我，readme.txt被修改过，但还没有准备提交的修改</li>
+<li>查看具体修改的内容，输入<code>git diff</code>，结果如下<br><img src="https://ws1.sinaimg.cn/large/779cb133gy1fkq8kdl9hvj20jz07hmxf.jpg" alt="5"><blockquote>
+<p>git diff顾名思义就是查看difference，显示的格式正是Unix通用的diff格式，可以从上面的命令输出看到</p>
+</blockquote>
+</li>
+<li><p>提j交所修改的内容，首先还是输入<code>git add readme.txt</code>。<br>同样没有任何输出。在执行第二步git commit之前，我可以运行<code>git status</code>看看当前仓库的状态<br>git status告诉我们，将要被提交的修改包括readme.txt，下一步，就可以放心地提交了<br>于是输入<code>git commit -m &quot;add goodbye!&quot;</code><br>这样就提交了，现在可以用<code>git status</code>查看状态，发现没有变化了<br><img src="https://ws1.sinaimg.cn/large/779cb133gy1fkqrvk3dfxj20k905cq38.jpg" alt="6"></p>
+<h4 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h4><p>在此期间我们产生了两个版本<br>版本1：wrote a readme file<br>版本2：add goodbye！<br>我们可以根据上面的操作进行更多的修改<br>我们不可能记住这么多的修改内容，于是可以借助命令<code>git log</code>查看版本历史记录，我们可以看到2次提交<br><img src="https://ws1.sinaimg.cn/large/779cb133ly1fkqs9fqs2ej20k106vdg6.jpg" alt="7"></p>
+<blockquote>
+<p>看起来乱的话我们也可以在<code>git log</code>命令后空格加入<code>--pretty=oneline</code><br><img src="https://ws1.sinaimg.cn/large/779cb133gy1fkqscy6mk6j20k402zwel.jpg" alt="8"><br>看到的一大串类似3628164…882e1e0的是commit id（版本号），和SVN不一样，Git的commit id不是1，2，3……递增的数字，而是一个SHA1计算出来的一个非常大的数字，用十六进制表示，而且你看到的commit id和我的肯定不一样，以你自己的为准。为什么commit id需要用这么一大串数字表示呢？因为Git是分布式的版本控制系统，后面我们还要研究多人在同一个版本库里工作，如果大家都用1，2，3……作为版本号，那肯定就冲突了。</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<p>   现在我们启动时光穿梭机，准备把readme.txt回退到上一个版本，也就是版本1 ，现在是版本2<br>   输入命令<code>git reset --hard HEAD^</code><br>   <img src="https://ws1.sinaimg.cn/large/779cb133gy1fkqsodiwpsj20jy02gaa2.jpg" alt="9"></p>
+<blockquote>
+<p>用HEAD表示当前版本，也就是最新的提交。上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。</p>
+</blockquote>
+<hr>
+<p>   此时版本回退到版本1，我可以输入<code>cat readme.txt</code>查看一下<br>   <img src="https://ws1.sinaimg.cn/large/779cb133gy1fkqss6mrs0j20k202n74a.jpg" alt="10"><br>已经退回到版本1了，版本2的修改没有了<br>在此输入<code>git log</code>查看提交历史，发现版本2已经消失了，如果我要回到版本2，我可以在上面的log反馈找到版本2的commit id信息，如果没有了，也可以使用命令<code>git reflog</code>查看所有的记录<br><strong>重点！！！！！！</strong>，HEAD指向的版本是当前的版本，Git允许我在版本的历史之间穿梭，使用命令<code>git reset --hard commit_id</code>(commit_id替换成我们所看到的id，版本号不需要写全，6位就行)<br><img src="https://ws1.sinaimg.cn/large/779cb133gy1fkqta39w2wj20k40bb0tm.jpg" alt="11"><br>此时文件已经回到版本2了</p>
+<h4 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h4><p>工作区就是你在电脑里能看到的目录，比如我的simple文件夹就是一个工作区<br>版本库（Repository）工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。<br>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD</p>
+<p>第一步是用git add把文件添加进去，实际上就是把文件修改<strong>添加到暂存区</strong>；<br>第二步是用git commit提交更改，实际上就是把暂存区的所有内容<strong>提交到当前分支</strong>。</p>
+<p>Git自动为我们创建了唯一一个master分支，所以，现在，git commit就是往master分支上提交更改。<br>可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。</p>
+<hr>
+<p>我可以在工作区创立一个newhere.txt文件，然后输入命令<code>git status</code>查看情况<br><img src="https://ws1.sinaimg.cn/large/779cb133gy1fkqtp6c5cjj20k1053dfz.jpg" alt="13"><br>Git非常清楚地告诉我newhere还从来没有被添加过，所以它的状态是Untracked。<br>用命令<code>git add newhere.txt</code>添加，用<code>git status</code>在查看<br><img src="https://ws1.sinaimg.cn/large/779cb133ly1fkqttw04hnj20ju05tglt.jpg" alt="14"><br>实际证明<strong><code>get add</code>命令就是把要提交的所有修改放到暂存区，然后执行<code>git commit</code>就可以就可以一次性把暂存区的所有修改提交到分支。</strong><br>此时我再看一下<code>git status</code>命令下结果，此时便空了<br><img src="https://ws1.sinaimg.cn/large/779cb133gy1fkr220b2wvj20k105njro.jpg" alt="16"><br>一旦提交后，如果你又没有对工作区做任何修改，那么工作区就是“干净”的</p>
+<h4 id="管理修改"><a href="#管理修改" class="headerlink" title="管理修改"></a>管理修改</h4><p>第一步，我对readme.txt做一个修改,添加一些内容后保存（我添加了anything else？）<br>输入<code>cat readme.txt</code><br>添加<code>git add readme.txt</code><br>查看<code>git status</code><br>提交<code>git commit -m&quot;anythingelse&quot;</code><br>再查看<code>git status</code><br><img src="https://ws1.sinaimg.cn/large/779cb133gy1fkr2ifuvydj20fw0cu754.jpg" alt="18"><br><strong>注意</strong>，<code>git add</code>后要<code>git commit</code>后才能从暂存区转到master区，否则重叠的修改会无效。<br>提交后，用<code>git diff HEAD -- readme.txt</code>命令可以查看工作区和版本库里面最新版本的区别<br><strong>如果出现在第一次修改后add后第二次修改后面直接commit导致第二次修改失效的情况</strong>，那怎么提交第二次修改呢？你可以继续<code>git add</code>再<code>git commit</code>，也可以别着急提交第一次修改，先<code>git add</code>第二次修改，再<code>git commit</code>，就相当于把两次修改合并后一块提交了<br>第一次修改 -&gt; <code>git add</code> -&gt; 第二次修改 -&gt;<code>git add</code> -&gt; <code>git commit</code></p>
+<h4 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h4><ol>
+<li>当我改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>（file为你针对的文件），意思是把readme.txt文件在工作区的修改全部撤销。有两种情况<br>一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；<br>一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。<br>总之，就是让这个文件回到最近一次git commit或git add时的状态。</li>
+<li>当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD file</code>，就回到了1内容，然后按1内容操作。</li>
+<li>已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。</li>
+</ol>
+<h4 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h4><p>先添加一个新文件test.txt到Git并且提交<br><code>git add test.txt</code><br><code>git commit -m &quot;add test.txt&quot;</code><br>一般情况下，你通常直接在文件管理器中把没用的文件删了，或者用rm命令删了<br><code>rm test.txt</code><br>这个时候，Git知道你删除了文件，因此，工作区和版本库就不一致了，<code>git status</code>命令会立刻告诉我哪些文件被删除了<br>现在有两个选择</p>
+<ol>
+<li>是确实要从版本库中删除该文件，那就用命令git rm删掉，并且git commit<br><code>git rm test.txt</code><br><code>git commit -m &quot;remove test.txt&quot;</code><br>现在，文件就从版本库中被删除了。<br><img src="https://ws1.sinaimg.cn/large/779cb133gy1fkr3wdll9vj20j50ev0tv.jpg" alt="19"></li>
+<li>删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本<br><code>git checkout -- test.txt</code><br><code>git checkout</code>其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</li>
+</ol>
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p>只要注册一个GitHub账号，就可以免费获得Git远程仓库<br>由于你的本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以，需要一点设置：<br>第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：<br><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code><br><img src="https://ws1.sinaimg.cn/large/779cb133gy1fkr448lir4j20hs0dgjsb.jpg" alt="20"><br>过程一直回车就行<br>如果一切顺利的话，可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。<br>第2步：登陆GitHub，点击头像，打开setting，ssh and gpg keys<br>然后，点“New SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容，然后add，确认密码，ok</p>
+<h4 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h4><p>首先，登陆GitHub，然后，在右上角+找到“new repository”按钮，创建一个新的仓库<br>填入自己的本地仓库名，直接确认<br>GitHub告诉我们，可以从这个仓库克隆出新的仓库，也可以把一个已有的本地仓库与之关联，然后，把本地仓库的内容推送到GitHub仓库。<br>现在，我们根据GitHub的提示，在本地仓库下运行命令<br><img src="https://ws1.sinaimg.cn/large/779cb133gy1fkr5fz9x9bj20yr05m0sx.jpg" alt="21"><br>结果如下<br><img src="https://ws1.sinaimg.cn/large/779cb133gy1fkr5kn5kpsj20ji0h4jsv.jpg" alt="22"><br>此后，每次本地提交后，只要有必要，就可以使用命令<code>git push origin master</code>推送最新修改<br><img src="https://ws1.sinaimg.cn/large/779cb133gy1fkr5tzm9xvj21690n0q4s.jpg" alt="23"></p>
+<h4 id="从远程库克隆"><a href="#从远程库克隆" class="headerlink" title="从远程库克隆"></a>从远程库克隆</h4><p>要克隆一个仓库，首先必须知道仓库的地址，然后使用<code>git clone</code>命令克隆。<br>Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快。</p>
+<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><p>分支在实际中有什么用呢？假设你准备开发一个新功能，但是需要两周才能完成，第一周你写了50%的代码，如果立刻提交，由于代码还没写完，不完整的代码库会导致别人不能干活了。如果等代码全部写完再一次提交，又存在丢失每天进度的巨大风险。<br>现在有了分支，就不用怕了。你创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上干活，想提交就提交，直到开发完毕后，再一次性合并到原来的分支上，这样，既安全，又不影响别人工作。<br>其他版本控制系统如SVN等都有分支管理，但是用过之后你会发现，这些版本控制系统创建和切换分支比蜗牛还慢，简直让人无法忍受，结果分支功能成了摆设，大家都不去用。<br>但Git的分支是与众不同的，无论创建、切换和删除分支，Git在1秒钟之内就能完成！无论你的版本库是1个文件还是1万个文件。</p>
+<h4 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h4><p>在版本回退里，你已经知道，每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即master分支。HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支。</p>
+<p>Git鼓励大量使用分支：<br>查看分支：<code>git branch</code><br>创建分支：<code>git branch &lt;name&gt;</code><br>切换分支：<code>git checkout &lt;name&gt;</code><br>创建+切换分支：<code>git checkout -b &lt;name&gt;</code><br>合并某分支到当前分支：<code>git merge &lt;name&gt;</code><br>删除分支：<code>git branch -d &lt;name&gt;</code></p>
+<hr>
+<p>​                                                        <strong>over</strong><img src="http://bmob-cdn-22657.b0.upaiyun.com/2018/12/01/dc51e29d408d41db80f56b13ce811b8b.gif" alt=""></p>
+<p>​                                                                                                                                                              <em>宗子璇</em></p>
+<p>​                                                                                                                                             </p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
